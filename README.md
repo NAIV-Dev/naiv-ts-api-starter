@@ -68,13 +68,15 @@ export const getMyCourse: T_getMyCourse = async req => {
 }
 ```
 
-You should place the function name inside folder `implementation` with exactly same file name with alias API name and also same for the `export const` name.
+You should place the function name inside folder `implementation` with exactly same file name with alias API name and also same for the `export const` name, otherwise the server will not recognize your API implementation.
 
 ## Run Server
 
 ```bash
 npm run build && npm start
 ```
+
+The server will automatically put your implementation function as controller/logic process on each API endpoint.
 
 ## Database Migration
 
