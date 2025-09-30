@@ -72,13 +72,17 @@ You should place the function name inside folder `implementation` with exactly s
 
 ## Run Server
 
+Before running the server, make sure you already have configure you database connection correctly. Look at the **Database Migration Guide** for db configuration.
+
 ```bash
 npm run build && npm start
 ```
 
 The server will automatically put your implementation function as controller/logic process on each API endpoint.
 
-## Database Migration
+## Database Migration Guide
+
+Before running db migration, you need to setup your database credential on `.env` file, duplicate from `.env.example` if it doesnt exist.
 
 ### Generate Migration
 
