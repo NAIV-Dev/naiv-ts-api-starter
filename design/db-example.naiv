@@ -1,0 +1,52 @@
+table User {
+  id bigint pk notnull inc
+  name varchar(200) notnull
+  email varchar(255) notnull unique
+  password varchar(255) notnull
+  role enum.UserRole notnull default=Student
+  created_at timestamp default="NOW()"
+}
+
+enum UserRole {
+  Student
+  Instructor
+  Admin
+}
+
+table Course {
+  id bigint pk notnull inc
+  id_instructor User.id notnull
+  title varchar(255) notnull
+  description text notnull
+  language enum.CourseLanguage notnull default=English
+}
+
+enum CourseLanguage {
+  English
+  Spanish
+  French
+  German
+  Chinese
+}
+
+table Enrollment {
+  id bigint pk notnull inc
+  id_user User.id notnull
+  id_course Course.id notnull
+  enrollment_date date notnull
+  status enum.EnrollmentStatus notnull default=Enrolled
+}
+
+enum EnrollmentStatus {
+  Enrolled
+  Completed
+  Dropped
+}
+
+table Lesson {
+  id bigint pk notnull inc
+  id_course Course.id notnull
+  title varchar(255) notnull
+  content text notnull
+  order int notnull
+}

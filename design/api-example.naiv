@@ -1,0 +1,45 @@
+api post /login {
+  alias login
+  body {
+    email string required
+    password string required
+  }
+  return schema.AuthResponse required
+}
+
+api post /register {
+  alias register
+  body {
+    fullname string required
+    email string required
+    password string required
+  }
+  return schema.AuthResponse required
+}
+
+api get /my-course {
+  alias getMyCourse
+  headers {
+    authorization string required
+  }
+  query {
+    limit number
+    offset number
+    q string
+  }
+  return {
+    total number required
+    data table.Course required
+  } required
+}
+
+api get /my-course/enrollment/:enrollment_id {
+  alias getMyCourseEnrollmentDetail
+  headers {
+    authorization string required
+  }
+  path {
+    enrollment_id number required
+  }
+  return table.Enrollment required
+}
