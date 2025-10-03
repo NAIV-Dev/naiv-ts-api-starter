@@ -17,8 +17,8 @@ api post /register {
   return schema.AuthResponse required
 }
 
-api get /my-course {
-  alias getMyCourse
+api get /my-transaction {
+  alias getMyTransaction
   headers {
     authorization string required
   }
@@ -29,17 +29,17 @@ api get /my-course {
   }
   return {
     total number required
-    data table.Course required
+    data table.Transaction required
   } required
 }
 
-api get /my-course/enrollment/:enrollment_id {
-  alias getMyCourseEnrollmentDetail
+api get /my-transaction/:transaction_id {
+  alias getMyTransactionDetail
   headers {
     authorization string required
   }
   path {
-    enrollment_id number required
+    transaction_id number required
   }
-  return table.Enrollment required
+  return table.Transaction required
 }
