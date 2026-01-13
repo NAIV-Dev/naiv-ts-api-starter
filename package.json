@@ -23,7 +23,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@naiv/codegen-model-typeorm": "^0.0.28",
+    "@naiv/codegen-nodejs-typeorm": "^0.0.1",
     "bcrypt": "^6.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",

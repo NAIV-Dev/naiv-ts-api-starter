@@ -1,7 +1,7 @@
 require('dotenv').config();
 import 'reflect-metadata';
 import { AppDataSource } from './data-source';
-import { Server } from '@naiv/codegen-model-typeorm';
+import { Server } from '@naiv/codegen-nodejs-typeorm';
 import path from 'path';
 
 const server = new Server();
