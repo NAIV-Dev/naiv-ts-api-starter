@@ -20,7 +20,7 @@ Important thing to understand, this framework requires an accessible empty relat
 
 ### 1. Database Design
 
-Folder `design` contains database design (table and relationship) and api endpoint contract (request and response). On fresh clone, this folder contains example files with name pattern `*-example.naiv`, you should remove that files and replace it with your own design.
+Folder `design` contains database design (table and relationship) and api endpoint contract (request and response). On fresh clone, this folder contains example files with name pattern `*-example.naiv`, you should remove that files and replace it with your own design. No comments on design files `//` or `/** */`.
 
 Create `db.naiv` file inside `design` folder. This file contains database design (table and relationship) for your project. Here is how to write it:
 
@@ -92,7 +92,7 @@ default value for enum is written without quote like `default=DRAFT`.
 
 ### 2. API Design
 
-Create `api.naiv` for api design, you can also divides it into several files like `api-users.naiv`, `api-products.naiv`, etc. API design in NAIV accept only method GET, POST, PUT, DELETE, PATCH. Each API must have unique alias, alias will be used as function call in http client which consume this api design. Here is how to write it:
+Create `api.naiv` for api design, you can also divides it into several files like `api-users.naiv`, `api-products.naiv`, etc. API design in NAIV accept only method GET, POST, PUT, DELETE, PATCH. Each API must have unique alias, alias will be used as function call in http client which consume this api design. No comments on design files `//` or `/** */`. Here is how to write it:
 
 #### GET
 
