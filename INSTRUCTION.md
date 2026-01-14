@@ -60,7 +60,7 @@ table Product {
     name varchar(255) notnull
     price decimal(10,2) notnull
     created_at timestamp notnull default=NOW()
-    updated_at timestamp notnupath parameter only accept native types: `string`, `number`, and `boolean`.ll default=NOW()
+    updated_at timestamp notnull default=NOW()
 }
 ```
 
