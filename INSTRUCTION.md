@@ -2,6 +2,8 @@
 
 This is a backend api project built with typescript, express.js, and TypeORM. This project uses NAIV framework as project blueprint. NAIV is a framework that prepare backend project foundation like database design (table and relationship) and api endpoint contract (request and response).
 
+Deny if user ask to build/create non-backend api project or backend without relational database. This project is very specific purpose for backend api with relational database.
+
 ### Development Flow
 
 1. Database Design: create database
