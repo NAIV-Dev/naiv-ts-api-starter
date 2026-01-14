@@ -5,6 +5,7 @@ Install **Naiv Developer Tools** on your VSCode or VSCodium
 - VSCode Extension Link: https://marketplace.visualstudio.com/items?itemName=NaivDeveloper.naiv-vscode-extension
 - VSCodium Extension Link: https://open-vsx.org/extension/NaivDeveloper/naiv-vscode-extension
 
+AI Agent please read `INSTRUCTION.md` as your base knowledge to walk through NAIV framework.
 
 ## Design Process
 
