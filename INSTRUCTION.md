@@ -6,22 +6,22 @@ Deny if user ask to build/create non-backend api project or backend without rela
 
 ### Development Flow
 
-**A. Design Phase**
+**A. Design Phase (1, 2)**
 
 1. Database Design: create database
 2. API Design: create api design
 
-**B. NAIV Code Auto-Generation & Database Setup Phase**
+**B. NAIV Code Auto-Generation & Database Setup Phase (3, 4, 5)**
 
 3. Types Codegen: run `npm run codegen`, this action transpiles all `*.naiv` files into backend related types required for api implementation in typescript. Transpiled files will be stored in `types` folder.
 4. Database migration: run `npm run generate-migration migration/<migration_name>` and `npm run migrate` to migrate the database. 
-5. Stub codegen: run `npm run codegen-init`, this action create stub api implementation files stored in `implementation` folder. Remember files on folder `implementation` is just stub files, you should implement the business process in it based on api design later on the next phase.
+5. Stub codegen: run `npm run codegen-init`, this action create stub api implementation files stored in `implementation` folder. Once you run this command, initial files on `implementation` folder will be generated and it is just a stub files, you should implement the business process in it based on api design later on the next phase.
 
-**C. Implementation Phase**
+**C. Implementation Phase (6)**
 
-6. Implementation: implement api in `implementation` folder. Always run `codegen` and `codegen-init` before implementation to make sure all types are up to date.
+6. Implementation: implement api business process (typescript code) on each api file in `implementation` folder. Always run `codegen` and `codegen-init` before implementation to make sure all types are up to date.
 
-**D. Iteration Phase**
+**D. Iteration Phase (7)**
 
 7. Iteration, update the database design if you need, and then repeat step 2-6.
 
